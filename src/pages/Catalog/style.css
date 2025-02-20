@@ -1,0 +1,69 @@
+.catalog-container {
+  max-width: 1200px; /* optional, can be removed if you want full-width */
+  margin: 0 auto;
+  padding: 0 4rem; /* Adds left & right padding */
+}
+
+/* Titles and text */
+.catalog-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.catalog-subtitle {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.catalog-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.catalog-highlight {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Lists */
+.catalog-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.catalog-list li {
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem; /* space for custom bullet */
+}
+
+.catalog-list li::before {
+  content: "•"; /* You can change to a custom icon if desired */
+  position: absolute;
+  left: 0;
+  color: #007bff; /* bullet color */
+}
+
+/* Images */
+.catalog-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* optional styling */
+}
+
+/* Button */
+button.btn.btn-primary {
+  background-color: #007bff; /* or your preferred color */
+  border-color: #007bff;
+}
+
+button.btn.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004e9a;
+}
+
+

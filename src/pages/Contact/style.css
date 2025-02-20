@@ -1,0 +1,5 @@
+.card-main:hover {
+    transform: translateY(-8px);
+    transition: transform 0.4s ease-in-out;
+  }
+  

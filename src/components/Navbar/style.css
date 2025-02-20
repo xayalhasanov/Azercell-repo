@@ -1,0 +1,327 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+/* Logo & Brand */
+#logo .img {
+  width: 77px;
+  height: 77px;
+}
+#logo .simsim {
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+#links {
+  /* Original values – note that later declarations override some properties */
+  margin: 10px 17px;
+  display: flex;
+  /* Final gap will be 10px (see later override) */
+  gap: 10px;
+  align-items: center;
+}
+#links .nav-link {
+  color: #333;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+#links .nav-link.active {
+  font-weight: 700;
+  color: #333;
+}
+#links .nav-link:hover {
+  color: #333;
+  
+}
+
+/* Search */
+#search {
+  font-weight: 700;
+}
+
+/* Join Button */
+.button-join {
+  /* From the first declaration… */
+  background-color: #007bff !important;
+  color: white !important;
+  padding: 10px 32px !important;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  /* Overwritten later: */
+  background: #007bff;
+  border-radius: 6px;
+  padding: 8px 24px !important;
+  /* Additional final properties: */
+  justify-content: center;
+  width: 100%;
+}
+.button-join:hover {
+  background-color: #0056b3 !important;
+  transform: translateY(-1px);
+}
+
+/* Navbar Toggler & Icon */
+.navbar-toggler {
+  border: none !important;
+  /* Overwritten padding: */
+  padding: 0 !important;
+  margin: 0 !important;
+  position: static !important;
+  transform: none !important;
+  line-height: 1;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.navbar-toggler-icon {
+  width: 1.2em !important;
+  height: 1.2em !important;
+  position: static !important;
+  /* Overwritten transform: */
+  transform: translateY(0) !important;
+  transition: none !important;
+}
+
+/* Navbar Collapse & Nav */
+.navbar-collapse {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap !important;
+  gap: 15px;
+}
+
+/* Navbar Overall */
+.navbar {
+  padding: 15px 0;
+}
+
+/* Custom Toggler */
+.custom-toggler {
+  border: none !important;
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px !important;
+}
+.custom-toggler svg {
+  color: #000;
+  transition: transform 0.3s ease-in-out;
+}
+.navbar-custom .custom-toggler:focus,
+.navbar-custom .custom-toggler:hover {
+  outline: none;
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* ---------- max-width: 991px ---------- */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+  }
+  #links {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-link {
+    width: 100%;
+    padding: 10px !important;
+    text-align: center;
+    border-radius: 6px;
+  }
+  .nav-link:hover {
+    background: #f8f9fa;
+  }
+  .button-join {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto !important;
+    padding: 12px 32px !important;
+    margin-top: 1rem;
+  }
+  .navbar-nav {
+    width: 100%;
+    align-items: center !important;
+  }
+  /* Language Dropdown */
+  #language-dropdown {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .dropdown-menu {
+    text-align: center;
+  }
+  .dropdown-item {
+    justify-content: center;
+  }
+  /* Ensure active link styling */
+  #links .nav-link.active {
+    font-weight: 700;
+    background: none;
+  }
+}
+
+/* ---------- max-width: 576px ---------- */
+@media (max-width: 576px) {
+  .navbar {
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .container {
+    padding: 0 15px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .navbar-collapse {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+  #links {
+    width: 100%;
+    padding: 0;
+  }
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-nav {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  #logo .img {
+    width: 60px;
+    height: 45px;
+  }
+  #logo span {
+    font-size: 18px;
+  }
+  .button-join {
+    padding: 10px 24px !important;
+    font-size: 14px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* ---------- max-width: 360px ---------- */
+@media (max-width: 360px) {
+  .button-join {
+    padding: 8px 20px !important;
+  }
+}
+
+/* ---------- max-width: 992px ---------- */
+@media (max-width: 992px) {
+  .button-join {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+/* ---------- max-width: 770px ---------- */
+@media (max-width: 770px) {
+  #links {
+    gap: 15px;
+  }
+  #links a {
+    font-size: 14px;
+  }
+}
+
+/* ---------- max-width: 768px ---------- */
+@media (max-width: 768px) {
+  .navbar-brand .img {
+    width: 50px;
+    height: auto;
+  }
+  .navbar-brand .simsim {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+  }
+}
+
+/* ---------- min-width: 769px and max-width: 991px ---------- */
+@media (min-width: 769px) and (max-width: 991px) {
+  .navbar-brand .img {
+    width: 60px;
+    height: auto;
+  }
+  .navbar-brand .simsim {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+/* ---------- min-width: 992px ---------- */
+@media (min-width: 992px) {
+  .navbar-brand .img {
+    width: 70px;
+    height: auto;
+  }
+  .navbar-brand .simsim {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+/* ---------- min-width: 568px and max-width: 991px ---------- */
+@media (min-width: 568px) and (max-width: 991px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  #links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .navbar-toggler {
+    margin-left: 0;
+  }
+  .navbar-brand {
+    margin: 0;
+  }
+}
